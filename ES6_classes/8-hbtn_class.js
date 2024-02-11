@@ -1,5 +1,8 @@
 export default class {
   constructor(size, location) {
+    if (typeof size !== 'number' || typeof location !== 'string') {
+      throw TypeError('error in the type of constructor attributes');
+    }
     this._size = size;
     this._location = location;
   }
